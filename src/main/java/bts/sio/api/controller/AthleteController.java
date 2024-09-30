@@ -1,12 +1,15 @@
 package bts.sio.api.controller;
 
 import bts.sio.api.model.Athlete;
+import bts.sio.api.model.Epreuve;
 import java.time.LocalDate;
 import bts.sio.api.model.Sport;
 import bts.sio.api.model.Pays;
 import bts.sio.api.service.AthleteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
 
 import java.util.Optional;
 
@@ -98,8 +101,6 @@ public class AthleteController {
         }
     }
 
-
-
     /**
      * Delete - Delete an athlete
      * @param id - The id of the athlete to delete
@@ -109,4 +110,13 @@ public class AthleteController {
         athleteService.deleteAthlete(id);
     }
 
+    @GetMapping("/athlete/{athleteId}/epreuves")
+    public List<Epreuve> getEpreuvesByAthlete(@PathVariable Long athleteId) {
+        return athleteService.getEpreuvesByAthleteId(athleteId);
+    }
+
+    @PostMapping("/athlete/{athleteId}/addEpreuves")
+    public Athlete addEpreuves(@PathVariable Long athleteId, @RequestBody List<Long> epreuveIds) {
+        return athleteService.addEpreuvesToAthlete(athleteId, epreuveIds);
+    }
 }
