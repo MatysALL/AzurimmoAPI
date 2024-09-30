@@ -1,5 +1,6 @@
 package bts.sio.api.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -40,6 +41,13 @@ public class Athlete {
     private List<Olympiade> olympiades = new ArrayList<>();
 
 
-
+    @ManyToMany
+    @JoinTable(
+            name = "athlete_epreuve", // Nom de la table de jointure
+            joinColumns = @JoinColumn(name = "athlete_id"),
+            inverseJoinColumns = @JoinColumn(name = "epreuve_id")
+    )
+    @JsonManagedReference  // Côté parent de la relation
+    private List<Epreuve> epreuves = new ArrayList<>();
 
 }
