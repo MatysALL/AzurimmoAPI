@@ -57,7 +57,6 @@ public class AthleteService {
                     .orElseThrow(() -> new RuntimeException("Epreuve not found with id: " + epreuveId));
 
             athlete.getEpreuves().add(epreuve);
-            epreuve.getAthletes().add(athlete);
         }
 
         athleteRepository.save(athlete);
