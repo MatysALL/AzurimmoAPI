@@ -15,7 +15,7 @@ public class Actualite {
     private Long id;
 
     @Column(name="titre")
-    private String nom;
+    private String titre;
 
     @Column(name="date")
     private LocalDate date;
