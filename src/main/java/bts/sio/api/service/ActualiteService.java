@@ -7,6 +7,8 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 
 @Data
 @Service
@@ -17,6 +19,10 @@ public class ActualiteService {
 
     public Iterable<Actualite> getActualites() {
         return actualiteRepository.findAll();
+    }
+
+    public Optional<Actualite> getActualite(final Long id) {
+        return actualiteRepository.findById(id);
     }
 
     public Actualite saveActualite(Actualite actualite) {
