@@ -47,7 +47,6 @@ public class Athlete {
             joinColumns = @JoinColumn(name = "athlete_id"),
             inverseJoinColumns = @JoinColumn(name = "epreuve_id")
     )
-    @JsonManagedReference  // Côté parent de la relation
     private List<Epreuve> epreuves = new ArrayList<>();
 
 }

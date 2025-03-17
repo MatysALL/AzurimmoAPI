@@ -1,7 +1,11 @@
 package bts.sio.api.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,5 +23,9 @@ public class Olympiade {
     @ManyToOne
     @JoinColumn(name = "pays_id")
     private Pays pays;
+
+    @ManyToMany(mappedBy = "olympiades")
+    @JsonBackReference
+    private List<Athlete> athletes = new ArrayList<>();
 
 }

@@ -22,4 +22,8 @@ public class Epreuve {
     @ManyToOne
     @JoinColumn(name = "sport_id")
     private Sport sport;
+
+    @ManyToMany(mappedBy = "epreuves")
+    @JsonBackReference
+    private List<Athlete> athletes = new ArrayList<>();
 }
