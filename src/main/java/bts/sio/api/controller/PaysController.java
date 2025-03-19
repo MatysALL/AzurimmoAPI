@@ -28,7 +28,7 @@ public class PaysController {
             @ApiResponse(responseCode = "500", description = "Erreur interne du serveur")
     })
     @GetMapping("/pays")
-    public Iterable<Pays> getAthletes() {
+    public Iterable<Pays> getPays() {
         return paysService.getLesPays();
     }
 }
