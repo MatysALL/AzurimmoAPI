@@ -1,6 +1,7 @@
 package bts.sio.api.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -24,6 +25,6 @@ public class Epreuve {
     private Sport sport;
 
     @ManyToMany(mappedBy = "epreuves")
-    @JsonBackReference
+    @JsonIgnore
     private List<Athlete> athletes = new ArrayList<>();
 }
