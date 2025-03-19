@@ -47,19 +47,4 @@ public class AthleteService {
 
         throw new RuntimeException("Athlete not found");
     }
-
-    public Athlete addEpreuvesToAthlete(Long athleteId, List<Long> epreuveIds) {
-        Athlete athlete = athleteRepository.findById(athleteId)
-                .orElseThrow(() -> new RuntimeException("Athlete not found with id: " + athleteId));
-
-        for (Long epreuveId : epreuveIds) {
-            Epreuve epreuve = epreuveRepository.findById(epreuveId)
-                    .orElseThrow(() -> new RuntimeException("Epreuve not found with id: " + epreuveId));
-
-            athlete.getEpreuves().add(epreuve);
-        }
-
-        athleteRepository.save(athlete);
-        return athlete;
-    }
 }
