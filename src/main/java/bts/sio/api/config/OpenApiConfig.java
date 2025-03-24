@@ -13,7 +13,8 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .servers(List.of(
-                        new Server().url("http://172.20.177.251:8080/alexisparis2024").description("Production Server")
+                        new Server().url("http://172.20.177.251:8080/alexisparis2024").description("Serveur Interne (Lycée)"),
+                        new Server().url("https://prodtomcat.inforostand14.net/alexisparis2024").description("Serveur Externe (Public)")
                 ));
     }
 }

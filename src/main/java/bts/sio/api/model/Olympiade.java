@@ -1,6 +1,7 @@
 package bts.sio.api.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,8 +17,13 @@ public class Olympiade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String numero ;
+    @Column(name="annee")
     private Integer annee;
+
+    @Column(name="numero")
+    private String numero;
+
+    @Column(name="ville")
     private String ville ;
 
     @ManyToOne
