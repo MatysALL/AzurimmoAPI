@@ -21,7 +21,7 @@ public class SwaggerConfig {
     public GroupedOpenApi api() {
         return GroupedOpenApi.builder()
                 .group("v1")
-                .packagesToScan("bts.sio.api.controller") // Remplacez par votre package de contrôleurs
+                .packagesToScan("bts.sio.api.controller")
                 .build();
     }
 }
