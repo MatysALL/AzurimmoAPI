@@ -34,6 +34,7 @@ public class AthleteService {
 
     public Athlete saveAthlete(Athlete athlete) {
         Athlete savedAthlete = athleteRepository.save(athlete);
+        System.out.println("service : " + athlete);
         return savedAthlete;
     }
 
