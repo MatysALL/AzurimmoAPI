@@ -45,6 +45,7 @@ public class AthleteController {
     })
     @PostMapping("/athlete")
     public Athlete createAthlete(@RequestBody Athlete athlete) {
+        System.out.println("JSON REÇU : " + athlete);
         return athleteService.saveAthlete(athlete);
     }
 

@@ -82,6 +82,7 @@ public class ActualiteController {
     })
     @PostMapping("/actualite")
     public Actualite createActualite(@RequestBody Actualite actualite) {
+        System.out.println("JSON REÇU : " + actualite);
         return actualiteService.saveActualite(actualite);
     }
 
