@@ -3,6 +3,7 @@ package bts.sio.api.model;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -37,7 +38,8 @@ public class Athlete {
     @ManyToMany
     @JoinTable( name = "athlete_olympiade",
             joinColumns = @JoinColumn( name = "athlete_id" ),
-            inverseJoinColumns = @JoinColumn( name = "olympiade_id" ) )
+            inverseJoinColumns = @JoinColumn( name = "olympiade_id" )
+    )
     private List<Olympiade> olympiades = new ArrayList<>();
 
 
