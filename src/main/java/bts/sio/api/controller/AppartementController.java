@@ -19,7 +19,7 @@ public class AppartementController {
         return appartementService.getAppartements();
     }
 
-    @GetMapping("/appartement/ville/{ville}")
+    @GetMapping("/appartements/ville/{ville}")
     public List<Appartement> findByVille(@PathVariable String ville) {
         return appartementService.getAppartementsByVille(ville);
     }
@@ -83,4 +83,3 @@ public class AppartementController {
         appartementService.deleteAppartement(id);
     }
 }
-

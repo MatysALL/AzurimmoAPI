@@ -27,4 +27,5 @@ public class Appartement {
     @ManyToOne
     @JoinColumn(name = "batiment_id")
     private Batiment batiment;
+
 }
