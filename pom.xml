@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>bts.sio.api</groupId>
-	<artifactId>willyazurimmo</artifactId>
+	<artifactId>matysazurimmo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>willyazurimmo</name>
-	<description>willyazurimmo</description>
+	<name>matysazurimmo</name>
+	<description>matysazurimmo</description>
 	<url/>
 	<licenses>
 		<license/>
