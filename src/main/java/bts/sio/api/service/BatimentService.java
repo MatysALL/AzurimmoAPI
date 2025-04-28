@@ -1,7 +1,5 @@
 package bts.sio.api.service;
 
-
-
 import bts.sio.api.model.Batiment;
 import bts.sio.api.repository.BatimentRepository;
 import lombok.Data;
@@ -10,10 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
+
 @Data
 @Service
 public class BatimentService {
-
     @Autowired
     private BatimentRepository batimentRepository;
 

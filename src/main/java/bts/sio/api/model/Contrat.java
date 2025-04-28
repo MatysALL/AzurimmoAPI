@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "contrat")
 public class Contrat {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

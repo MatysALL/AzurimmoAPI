@@ -7,7 +7,6 @@ import lombok.Data;
 @Entity
 @Table(name = "appartement")
 public class Appartement {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,5 +26,4 @@ public class Appartement {
     @ManyToOne
     @JoinColumn(name = "batiment_id")
     private Batiment batiment;
-
 }
