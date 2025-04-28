@@ -19,4 +19,8 @@ public class Societe {
 
     @Column(name="description")
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private Type type;
 }
