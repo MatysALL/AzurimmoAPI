@@ -24,7 +24,7 @@ public class AppartementController {
         return appartementService.getAppartementsByVille(ville);
     }
 
-    @GetMapping("/appartement/batiment/{batimentId}")
+    @GetMapping("/appartements/batiment/{batimentId}")
     public List<Appartement> findByBatimentId(@PathVariable long batimentId) {
         return appartementService.getAppartementsParBatiment(batimentId);
     }
