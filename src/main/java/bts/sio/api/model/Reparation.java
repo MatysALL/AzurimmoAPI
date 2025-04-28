@@ -27,8 +27,4 @@ public class Reparation {
     @ManyToOne
     @JoinColumn(name = "societe_id")
     private Societe societe;
-
-    @ManyToOne
-    @JoinColumn(name = "type_id")
-    private Type type;
 }

@@ -47,11 +47,6 @@ public class ReparationController {
                 currentReparation.setDescription(description);
             }
 
-            Type type = reparation.getType();
-            if(type != null) {
-                currentReparation.setType(type);
-            }
-
             Societe societe = reparation.getSociete();
             if(societe != null) {
                 currentReparation.setSociete(societe);
