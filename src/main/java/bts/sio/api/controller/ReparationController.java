@@ -47,7 +47,7 @@ public class ReparationController {
                 currentReparation.setDescription(description);
             }
 
-            String type = reparation.getType();
+            Type type = reparation.getType();
             if(type != null) {
                 currentReparation.setType(type);
             }
