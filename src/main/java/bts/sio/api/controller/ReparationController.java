@@ -52,14 +52,14 @@ public class ReparationController {
                 currentReparation.setType(type);
             }
 
-            String societe = reparation.getSociete();
+            Societe societe = reparation.getSociete();
             if(societe != null) {
                 currentReparation.setSociete(societe);
             }
 
             Appartement appartement = reparation.getAppartement();
             if(appartement != null) {
-                currentReparation.setAppartement(appartement);;
+                currentReparation.setAppartement(appartement);
             }
 
             reparationService.saveReparation(currentReparation);
