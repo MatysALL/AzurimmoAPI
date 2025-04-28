@@ -23,10 +23,11 @@ public class Reparation {
     @Column(name="type")
     private String type;
 
-    @Column(name="societe")
-    private String societe;
-
     @ManyToOne
     @JoinColumn(name = "appartement_id")
     private Appartement appartement;
+
+    @ManyToOne
+    @JoinColumn(name = "societe_id")
+    private Societe societe;
 }
