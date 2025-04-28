@@ -9,9 +9,7 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "reparation")
-
 public class Reparation {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

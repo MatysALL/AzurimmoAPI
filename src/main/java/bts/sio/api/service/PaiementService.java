@@ -1,6 +1,5 @@
 package bts.sio.api.service;
 
-
 import bts.sio.api.model.Paiement;
 import bts.sio.api.repository.PaiementRepository;
 import lombok.Data;
@@ -12,7 +11,6 @@ import java.util.Optional;
 @Data
 @Service
 public class PaiementService {
-
     @Autowired
     private PaiementRepository paiementRepository;
 

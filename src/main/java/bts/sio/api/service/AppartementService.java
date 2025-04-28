@@ -12,7 +12,6 @@ import java.util.Optional;
 @Data
 @Service
 public class AppartementService {
-
     @Autowired
     private AppartementRepository appartementRepository;
 

@@ -1,6 +1,5 @@
 package bts.sio.api.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -9,7 +8,6 @@ import lombok.Data;
 @Entity
 @Table(name = "batiment")
 public class Batiment {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

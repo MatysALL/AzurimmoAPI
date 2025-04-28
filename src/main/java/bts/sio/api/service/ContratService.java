@@ -1,16 +1,15 @@
 package bts.sio.api.service;
 
-
 import bts.sio.api.model.Contrat;
 import bts.sio.api.repository.ContratRepository;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
+
 @Data
 @Service
 public class ContratService {
-
     @Autowired
     private ContratRepository contratRepository;
 

@@ -1,7 +1,5 @@
 package bts.sio.api.controller;
 
-import java.time.LocalDate;
-
 import bts.sio.api.model.Batiment;
 import bts.sio.api.service.BatimentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +53,6 @@ public class BatimentController {
 
     @DeleteMapping("/batiment/{id}")
     public void deleteBatiment(@PathVariable("id") final Long id) {
-
         batimentService.deleteBatiment(id);
     }
 }

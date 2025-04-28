@@ -1,7 +1,6 @@
 package bts.sio.api.controller;
 
 
-import bts.sio.api.model.Appartement;
 /**import com.bts.sio.azurimmoapi.model.Contrat;**/
 import bts.sio.api.model.Locataire;
 /**import com.bts.sio.azurimmoapi.service.ContratService;**/
@@ -9,7 +8,6 @@ import bts.sio.api.service.LocataireService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.Optional;
 
 @RestController
